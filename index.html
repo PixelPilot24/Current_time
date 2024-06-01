@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Current time</title>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.png">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<!-- Load the current timezone -->
+<body onload="checkTimeZone()">
+
+<header>
+  <!-- Changes from dark to light mode and reverse -->
+  <a id="change-color-mode" onclick="changeColorMode()">
+    <img id="color-mode-icon" alt="Change the color mode" src="/img/light_mode.png">
+  </a>
+</header>
+
+<main>
+  <div id="window-container">
+    <!-- Section for time zone selection -->
+    <section class="timezone-class">
+      <h5 id="timezone">Timezone</h5>
+      <!-- Edit the time zone -->
+      <a id="change-timezone">
+        <img id="edit-icon" alt="Edit the timezone" src="/img/edit_icon_dark_mode.png">
+      </a>
+    </section>
+    <!-- Show the current, or from the selected time zone, time and date -->
+    <p id="current-time">Current time</p>
+    <p id="current-date">Current date</p>
+  </div>
+
+  <!-- Dialog from time zone selection -->
+  <dialog id="timezone-dialog">
+    <form style="display: flex; flex-direction: column; gap: 1rem;">
+      <label for="timezone-container">Change Timezone</label>
+      <!-- Dropdown from time zone selection -->
+      <select id="timezone-container"></select>
+      <div style="display: flex; justify-content: space-around">
+        <button id="confirmTz" value="confirm">Confirm</button>
+        <button id="cancel">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+</main>
+<script src="/js/app.js"></script>
+
+</body>
+
+</html>

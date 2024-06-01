@@ -1,0 +1,31 @@
+{
+  "name": "current-time-app",
+  "version": "1.0.0",
+  "description": "A web application that displays the current time and date based on the user's selected time zone and allows switching between light and dark modes.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PixelPilot24/current-time-app.git"
+  },
+  "keywords": [
+    "time", "date", "timezone", "light mode", "dark mode"
+  ],
+  "license": "MIT",
+  "author": "PixelPilot24",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.prod.js"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.11"
+  }
+}

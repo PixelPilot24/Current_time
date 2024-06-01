@@ -1,0 +1,78 @@
+/* Variables for font sizes and colors */
+:root {
+  --font-size-time: 100px;
+  --font-size-date: calc(var(--font-size-time) / 4);
+  --font-size-dialog-h: 30px;
+  --font-size-dialog: 20px;
+  --bg-color: #0f0f0f;
+  --bg-button-color: #005b41;
+  --text-color: #008170;
+}
+
+/* Global style */
+body {
+  background-color: var(--bg-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Styles for the container with time and date */
+#window-container {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  font-size: var(--font-size-date);
+}
+
+#current-time {
+  font-size: var(--font-size-time);
+  font-weight: bold;
+}
+
+/* Styles for the time zone */
+.timezone-class {
+  display: flex;
+  color: var(--bg-button-color);
+  font-size: var(--font-size-date);
+}
+
+.timezone-class img {
+  height: 18px;
+}
+
+/* Styles for changing the color scheme */
+#change-color-mode {
+  display: flex;
+  justify-content: center;
+}
+
+#change-color-mode img {
+  height: 30px;
+}
+
+/* Styles for the time zone dialog */
+#timezone-dialog {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--font-size-dialog-h);
+}
+
+#timezone-dialog select {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--font-size-dialog);
+}
+
+#timezone-dialog button {
+  background-color: var(--bg-button-color);
+  color: var(--bg-color);
+  font-size: var(--font-size-dialog);
+}
